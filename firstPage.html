@@ -1,0 +1,56 @@
+<html>
+
+    <head>
+        <title>My Page</title>
+    </head>
+
+    <body>
+        <div style="text-align: center;">
+            <h1>Unicorns</h1>
+            <button onclick="message()">Other things</button> <br><br>
+              <br>
+            <a href="Another.html">
+                <img id="myImage" width="400" height="300" src="">
+            </a> <br>
+            <iframe width="400" height="300" src="https://www.youtube.com/embed/XHwosEAcuos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+        <style>
+            body {background-color: rgb(46, 131, 74);}
+            h1 {color:blanchedalmond;}
+            h2 {text-align: center;}
+            p {color: turquoise;}
+            #yolo {color: maroon;}
+        </style>
+
+        <script>
+            let imageChange = document.querySelector("#myImage");
+
+
+            var imageList = ["unicorn.jpg", "horse.jfif", "dog.jpg", "cat.jpg"];
+            let number = 0;
+
+            for(let i=0; i<1000; i++) {
+                task(i)
+            }
+
+            function task(i) {
+                setTimeout(function() {
+                    if(number == 4) {
+                        number = 0;
+                    }
+                    imageChange.src=imageList[number];
+                        number += 1;
+                }, 2000 * i)
+            }
+            
+
+
+        </script>
+
+
+
+    </body>
+
+</html>
+
